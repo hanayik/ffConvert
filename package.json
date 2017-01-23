@@ -1,0 +1,27 @@
+{
+  "name": "ffconvert",
+  "version": "1.0.0",
+  "description": "convert video files using ffmpeg",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron app.js",
+    "build-mac": "electron-packager . --out=dist --platform=darwin --overwrite --icon ./icon.icns --tmpdir=false"
+  },
+  "keywords": [
+    "ffmpeg",
+    "convert",
+    "video"
+  ],
+  "author": "Taylor Hanayik",
+  "license": "ISC",
+  "devDependencies": {
+    "app-root-dir": "^1.0.2",
+    "electron": "^1.4.15",
+    "ipc": "0.0.1",
+    "moment": "^2.17.1"
+  },
+  "dependencies": {
+    "app-root-dir": "^1.0.2",
+    "moment": "^2.17.1"
+  }
+}

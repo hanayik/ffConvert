@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ffConvert</title>
+    <style>
+    .wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .button {
+        position: absolute;
+        top: 50%;
+    }
+    </style>
+    <script type="text/javascript">
+      const {dialog} = require('electron').remote
+      const {ipcRenderer} = require('electron')
+      //var list = document.getElementById("listArea").innerHTML
+      function openDialog() {
+        //dialog.showOpenDialog({properties: ['openFile', 'openDirectory', 'multiSelections']})
+        console.log(dialog.showOpenDialog({properties: ['openFile', 'openDirectory', 'multiSelections']}, function(fileNames) {
+          if (fileNames === undefined) return;
+          var fileName = fileNames[0];
+          var n = fileNames.length
+          console.log("numer of files selected: ", n)
+          var progress = 0
+          for (var i=0; i<n; i++) {
+            console.log("converting file: ", fileNames[i])
+            progress = (i+1)/n
+            ipcRenderer.send('updateProgress', progress)
+            ipcRenderer.send('runffmpeg', fileNames[i])
+          }
+          ipcRenderer.send('removeProgress', -1)
+
+        }))
+      }
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+    <h1>Click the button to convert</h1>
+    <button class="button" onclick="openDialog()">Choose videos</button>
+    <br><br>
+
+</div>
+  </body>
+</html>
