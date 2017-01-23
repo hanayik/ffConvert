@@ -1,6 +1,6 @@
 {
   "name": "ffconvert",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "convert video files using ffmpeg",
   "main": "app.js",
   "scripts": {
