@@ -1,7 +1,7 @@
 const {app, BrowserWindow, ipcMain} = require('electron')
 const path = require('path')
 const url = require('url')
-const exec = require( 'child_process' ).exec
+const execSync = require( 'child_process' ).execSync
 let appRootDir = require('app-root-dir').get() //get the path of the application bundle
 var moment = require('moment')
 var ffmpeg = appRootDir+'/node_modules/ffmpeg/ffmpeg'
@@ -84,10 +84,13 @@ ipcMain.on('runffmpeg', function (e, inputFile) {
               ' ' + outputFile]
                 //ffmpeg -i input.wmv -c:v libx264 -crf 23 -c:a libfaac -q:a 100 output.mp4
   console.log(argString)
-  const ff = exec(argString)
+  const ff = execSync(argString)
+  /*
   ff.on('exit', function() {
-        e.sender.send('updateFileList', inputParts.base);
+        //e.sender.send('updateFileList', inputParts.base);
+        console.log("done!")
   })
+  */
   /*
   ff.stdout.on( 'data', data => {
    console.log( `stdout: ${data}` );
