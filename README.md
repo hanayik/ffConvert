@@ -8,6 +8,26 @@ Link to latest release: [macOS](https://github.com/hanayik/ffConvert/releases/do
 
 Help is always appreciated. Please submit a pull request if you add features, or submit an issue to point out bugs/enhancements
 
+##For developers:
+to get started (from terminal):
+
+```
+
+# change to home folder
+cd ~
+# clone repo
+git clone https://github.com/hanayik/ffConvert.git
+# change to repo folder
+cd ffConvert
+# install dependencies
+npm install
+# run the program
+npm start
+# to build the macOS app
+npm run build-mac
+
+```
+
 ![ffConvert](./media/icon.png)
 
 Credits: [app icon](http://www.freepik.com) Designed by Ikaika / Freepik
