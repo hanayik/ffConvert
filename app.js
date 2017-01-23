@@ -78,10 +78,10 @@ ipcMain.on('runffmpeg', function (e, inputFile) {
   inputParts.base = inputParts.name + inputParts.ext
   outputFile = path.format(inputParts)
   console.log(outputFile)
-  argString = [ffmpeg + ' -y -i ' +inputFile +
+  argString = [ffmpeg + ' -y -i ' + '"' + inputFile + '"' +
               ' -c:v ' + ffParams.vCodec +
               ' -crf ' + ffParams.quality +
-              ' ' + outputFile]
+              ' ' + '"' + outputFile + '"']
                 //ffmpeg -i input.wmv -c:v libx264 -crf 23 -c:a libfaac -q:a 100 output.mp4
   console.log(argString)
   const ff = execSync(argString)
