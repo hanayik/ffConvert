@@ -17,6 +17,12 @@
     <script type="text/javascript">
       const {dialog} = require('electron').remote
       const {ipcRenderer} = require('electron')
+      ipcRenderer.on('updateFileList', function (e, convertedName) {
+        //var list = document.getElementById('fileList');
+        //var entry = document.createElement('li');
+        //entry.appendChild(document.createTextNode(convertedName));
+        //list.appendChild(entry);
+      })
       //var list = document.getElementById("listArea").innerHTML
       function openDialog() {
         //dialog.showOpenDialog({properties: ['openFile', 'openDirectory', 'multiSelections']})
@@ -40,10 +46,9 @@
   </head>
   <body>
     <div class="wrapper">
-    <h1>Click the button to convert</h1>
-    <button class="button" onclick="openDialog()">Choose videos</button>
-    <br><br>
+      <h1>Click the button to convert</h1>
+      <button class="button" onclick="openDialog()">Choose videos</button>
 
-</div>
+    </div>
   </body>
 </html>

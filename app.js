@@ -85,6 +85,9 @@ ipcMain.on('runffmpeg', function (e, inputFile) {
                 //ffmpeg -i input.wmv -c:v libx264 -crf 23 -c:a libfaac -q:a 100 output.mp4
   console.log(argString)
   const ff = exec(argString)
+  ff.on('exit', function() {
+        e.sender.send('updateFileList', inputParts.base);
+  })
   /*
   ff.stdout.on( 'data', data => {
    console.log( `stdout: ${data}` );
