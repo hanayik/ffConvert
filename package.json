@@ -17,6 +17,7 @@
   "devDependencies": {
     "app-root-dir": "^1.0.2",
     "electron": "^1.4.15",
+    "electron-packager": "^8.5.1",
     "ipc": "0.0.1",
     "moment": "^2.17.1"
   },
