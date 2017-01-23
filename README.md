@@ -1,4 +1,5 @@
-ffConvert
+##ffConvert
+![ffConvert](icons/icon.png)
 
 Convert almost any video format to .mp4 using [ffmpeg](https://ffmpeg.org/)
 
