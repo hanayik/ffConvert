@@ -1,4 +1,4 @@
-##ffConvert
+##ffConvert ![ffConvert](./media/icon32x32.png)
 
 Convert almost any video format to .mp4 using [ffmpeg](https://ffmpeg.org/)
 
@@ -33,6 +33,5 @@ npm run build-mac
 
 ```
 
-![ffConvert](./media/icon64x64.png)
 
 Credits: [app icon](http://www.freepik.com) Designed by Ikaika / Freepik
