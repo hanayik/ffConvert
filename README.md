@@ -1,4 +1,5 @@
-##ffConvert ![ffConvert](./media/icon32x32.png)
+![ffConvert](./media/icon32x32.png)
+##ffConvert
 
 Convert almost any video format to .mp4 using [ffmpeg](https://ffmpeg.org/)
 
