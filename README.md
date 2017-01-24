@@ -15,19 +15,24 @@ to get started (from terminal):
 
 # change to home folder
 cd ~
+
 # clone repo
 git clone https://github.com/hanayik/ffConvert.git
+
 # change to repo folder
 cd ffConvert
+
 # install dependencies
 npm install
+
 # run the program
 npm start
-# to build the macOS app
+
+# to build the macOS app (only platform I own)
 npm run build-mac
 
 ```
 
-![ffConvert](./media/icon.png)
+![ffConvert](./media/icon64x64.png)
 
 Credits: [app icon](http://www.freepik.com) Designed by Ikaika / Freepik
