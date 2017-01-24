@@ -37,3 +37,5 @@ npm run build-mac
 
 
 Credits: [app icon](http://www.freepik.com) Designed by Ikaika / Freepik
+
+License: GPL-v3.0
