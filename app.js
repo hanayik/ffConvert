@@ -4,7 +4,7 @@ const url = require('url')
 const execSync = require( 'child_process' ).execSync
 let appRootDir = require('app-root-dir').get() //get the path of the application bundle
 var moment = require('moment')
-var ffmpeg = appRootDir+'/node_modules/ffmpeg/ffmpeg'
+var ffmpeg = appRootDir+'/ffmpeg/ffmpeg'
 
 
 // Keep a global reference of the window object, if you don't, the window will
