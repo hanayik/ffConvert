@@ -1,4 +1,4 @@
-##ffConvert
+##ffConvert (work in progress)
 
 ![ffConvert](./media/icon64x64.png)
 
